@@ -1,22 +1,28 @@
 {
   "version": "1.0.0",
-  "name": "prism.rhapsody.view.dashboard",
+  "name": "prism.landing.view.dashboard",
   "private": true,
   "scripts": {
-    "rm": "node client/node_modules/rimraf/bin",
-    "clean": "npm run rm server/public pkg ut bin",
+    "clean": "npm run rm server/public pkg ut",
     "postinstall": "npm run server:install && npm run client:install",
     "client:install": "cd client && npm install",
     "server:install": "cd server && npm install",
     "lint": "cd client && npm run lint",
     "start": "node server/startup",
-    "wait:start": "node client/node_modules/wait-on/bin/wait-on server/public/favicon.ico && node server/startup --debug",
+    "wait:start": "npm run waiton server/public/favicon.ico && node server/startup --debug",
+    "wait:open": "npm run waiton tcp:5000 && npm run opn http://localhost:5000/",
     "build": "cd client && npm run build",
     "build:watch": "cd client && npm run build:watch",
-    "debug": "npm run clean && node client/node_modules/concurrently/src/main --raw \"npm run build:watch\" \"npm run wait:start\" \"npm run debugserv\"",
+    "debug": "npm run clean && npm run concurrently --raw \"npm run build:watch\" \"npm run wait:start\" \"npm run debugserv\" \"npm run wait:open\"",
     "mock": "npm run clean && cd client && npm run mock",
     "test": "npm run rm ut && cd client && npm test",
-    "pkg": "npm run rm pkg && node client/node_modules/ncp/bin/ncp server pkg && npm run rm pkg/package*.json",
-    "debugserv": "node client/node_modules/livereload/bin/livereload server/public"
+    "pkg": "npm run rm pkg && npm run ncp server pkg && npm run rm pkg/package*.json",
+    "debugserv": "npm run livereload server/public",
+    "rm": "node client/node_modules/rimraf/bin",
+    "waiton": "node client/node_modules/wait-on/bin/wait-on",
+    "concurrently": "node client/node_modules/concurrently/src/main",
+    "opn": "node client/node_modules/opn-cli/cli",
+    "ncp": "node client/node_modules/ncp/bin/ncp",
+    "livereload": "node client/node_modules/livereload/bin/livereload"
   }
 }
