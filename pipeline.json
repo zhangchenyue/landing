@@ -1,0 +1,12 @@
+{
+    "type": "WebAppNodeJs",
+    "name": "Rhapsody.View.Dashboard",
+    "pkg.projectPath": "View/project.json",
+    "pkg.nuspecPath": "View/Slb.Prism.Rhapsody.View.Dashboard.nuspec",
+    "pkg.nuspecIntPath": "IntegrationTests/Slb.Prism.Rhapsody.View.Dashboard.IntegrationTests.nuspec",
+    "qc.utCoverageThreshold": "0",
+    "qc.duplicatedCodeThreshold": 50,
+    "it.envPrefix": "rhint.rhapsody",
+    "codescan.sourceDirs": "View/client/src",
+	"compile.framework": "net451"
+}

@@ -1,0 +1,22 @@
+{
+  "version": "1.0.0",
+  "name": "prism.rhapsody.view.dashboard",
+  "private": true,
+  "scripts": {
+    "rm": "node client/node_modules/rimraf/bin",
+    "clean": "npm run rm server/public pkg ut bin",
+    "postinstall": "npm run server:install && npm run client:install",
+    "client:install": "cd client && npm install",
+    "server:install": "cd server && npm install",
+    "lint": "cd client && npm run lint",
+    "start": "node server/startup",
+    "wait:start": "node client/node_modules/wait-on/bin/wait-on server/public/favicon.ico && node server/startup --debug",
+    "build": "cd client && npm run build",
+    "build:watch": "cd client && npm run build:watch",
+    "debug": "npm run clean && node client/node_modules/concurrently/src/main --raw \"npm run build:watch\" \"npm run wait:start\" \"npm run debugserv\"",
+    "mock": "npm run clean && cd client && npm run mock",
+    "test": "npm run rm ut && cd client && npm test",
+    "pkg": "npm run rm pkg && node client/node_modules/ncp/bin/ncp server pkg && npm run rm pkg/package*.json",
+    "debugserv": "node client/node_modules/livereload/bin/livereload server/public"
+  }
+}

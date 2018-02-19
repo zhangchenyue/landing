@@ -1,0 +1,178 @@
+{
+  "value": [
+    {
+      "uuid": "735d73ab-5fd4-4f0b-956f-0cff364ce606",
+      "wellId": "762c3a0b-6c86-4c36-9609-6bb4f15e59b6",
+      "wellboreId": "bcd91966-54cc-4410-b5de-b088be87a0d3",
+      "existenceKind": "planned",
+      "wellboreGeometry": {
+        "mdBase": {
+          "uom": "yd",
+          "datum": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "value": 3.14159265358979
+        },
+        "gapAir": {
+          "uom": "um",
+          "value": 3.14159265358979
+        },
+        "depthWaterMean": {
+          "uom": "ftSe",
+          "value": 3.14159265358979
+        },
+        "growingStatus": "closed",
+        "wellboreGeometrySection": [
+          {
+            "citation": {
+              "title": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "originator": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "creation": "2001-12-17T09:30:47Z",
+              "format": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "editor": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "lastUpdate": "2001-12-17T09:30:47Z",
+              "lastUpdateSpecified": true,
+              "versionString": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "description": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "descriptiveKeywords": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "typeHoleCasing": "casing",
+            "typeHoleCasingSpecified": true,
+            "sectionMDInterval": {
+              "mdTop": {
+                "uom": "rodUS",
+                "value": 3.14159265358979
+              },
+              "mdBase": {
+                "uom": "tm",
+                "value": 3.14159265358979
+              },
+              "datum": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "sectionTvdInterval": {
+              "tvdTop": {
+                "uom": "ydInd37",
+                "value": 3.14159265358979
+              },
+              "tvdBase": {
+                "uom": "gm",
+                "value": 3.14159265358979
+              },
+              "datum": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "innerDiameterSection": {
+              "uom": "ftBnA",
+              "value": 3.14159265358979
+            },
+            "outerDiameterSection": {
+              "uom": "item30ft",
+              "value": 3.14159265358979
+            },
+            "weightPerLen": {
+              "uom": "kgmcm2",
+              "value": 3.14159265358979
+            },
+            "grade": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "curveConductor": true,
+            "curveConductorSpecified": true,
+            "diaDrift": {
+              "uom": "chainBnA",
+              "value": 3.14159265358979
+            },
+            "factFric": 3.14159265358979,
+            "factFricSpecified": true,
+            "extensionNameValue": [
+              {
+                "name": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                "value": {
+                  "uomSpecified": false,
+                  "value": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                },
+                "measureClass": "diffusioncoefficient",
+                "measureClassSpecified": true,
+                "dateTime": {},
+                "index": 0,
+                "indexSpecified": true,
+                "description": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+              }
+            ],
+            "extensionNameValueSpecified": true,
+            "bhaRun": [
+              {
+                "contentType": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                "title": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                "uuid": "00000000-0000-0000-0000-000000000000",
+                "uuidAuthority": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+                "uri": "http://www.altova.com",
+                "versionString": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+              }
+            ],
+            "bhaRunSpecified": true,
+            "uid": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ],
+        "wellboreGeometrySectionSpecified": true,
+        "wellbore": {
+          "contentType": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "title": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "uuid": "bcd91966-54cc-4410-b5de-b088be87a0d3",
+          "uuidAuthority": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "uri": "http://www.altova.com",
+          "versionString": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "bhaRun": [
+          {
+            "contentType": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "title": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "uuid": "00000000-0000-0000-0000-000000000000",
+            "uuidAuthority": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "uri": "http://www.altova.com",
+            "versionString": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ],
+        "bhaRunSpecified": true,
+        "aliases": [
+          {
+            "identifier": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "description": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "authority": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ],
+        "aliasesSpecified": true,
+        "citation": {
+          "title": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "originator": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "creation": "2001-12-17T09:30:47Z",
+          "format": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "editor": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "lastUpdate": "2001-12-17T09:30:47Z",
+          "lastUpdateSpecified": true,
+          "versionString": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "description": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "descriptiveKeywords": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "customData": {
+          "anySpecified": false
+        },
+        "extensionNameValue": [
+          {
+            "name": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "value": {
+              "uomSpecified": false,
+              "value": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "measureClass": "amountofsubstanceperamountofsubstance",
+            "measureClassSpecified": true,
+            "dateTime": {},
+            "index": 0,
+            "indexSpecified": true,
+            "description": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        ],
+        "extensionNameValueSpecified": true,
+        "schemaVersion": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "uuid": "735d73ab-5fd4-4f0b-956f-0cff364ce606",
+        "existenceKind": "planned",
+        "existenceKindSpecified": true
+      }
+    }
+  ]
+}
