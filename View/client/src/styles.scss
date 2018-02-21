@@ -1,1 +1,43 @@
-/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/@slb-planck-ui/web-components/core/style/_variables";
+
+html {
+    font-size: 10px;
+}
+
+.side-bar {
+    margin-right: 1rem;
+    flex: 1;
+}
+
+.exec-view {
+    display: flex;
+    height: 100%;
+    margin: 0 $sdo-main-layout-margin;
+}
+
+.exec-side-bar {
+    display: flex;
+    flex: 1;
+    min-width: 35rem;
+    overflow: hidden;
+    backface-visibility: hidden;
+    will-change: overflow;
+}
+
+.exec-main-content {
+    position: relative;
+    display: flex;
+    flex: 3;
+}
+
+.exec-full-view {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.unit {
+    text-transform: lowercase;
+    font-family: $font-regular;
+}
+

@@ -9,7 +9,32 @@
       "outDir": "../server/public",
       "assets": [
         "assets",
-        "favicon.ico"
+        "favicon.ico",
+        {
+          "glob": "global_theme_light.css",
+          "input": "../node_modules/@slb-planck-ui/web-components/core/theming/",
+          "output": "./assets/"
+        },
+        {
+          "glob": "global_theme_dark.css",
+          "input": "../node_modules/@slb-planck-ui/web-components/core/theming/",
+          "output": "./assets/"
+        },
+        {
+          "glob": "framework_theme_light.css",
+          "input": "../node_modules/@slb-planck-ui/web-framework/core/theming/",
+          "output": "./assets/"
+        },
+        {
+          "glob": "framework_theme_dark.css",
+          "input": "../node_modules/@slb-planck-ui/web-framework/core/theming/",
+          "output": "./assets/"
+        },
+        {
+          "glob": "basic.svg",
+          "input": "../node_modules/@slb-planck-ui/web-icons/assets/",
+          "output": "./assets/"
+        }
       ],
       "index": "index.html",
       "main": "main.ts",
@@ -19,6 +44,8 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
+        "../node_modules/@slb-planck-ui/web-components/core/style/vendor.css",
+        "../node_modules/@slb-planck-ui/web-components/core/style/common.css",
         "styles.scss"
       ],
       "scripts": [],
