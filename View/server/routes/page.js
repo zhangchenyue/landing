@@ -4,7 +4,7 @@ const path = require('path');
 const pageRouter = express.Router();
 const pageRoutes = [
     '/',
-    '/performance',
+    '/hello',
     '/qcview',
     '/maestrofootage',
     '/kpitracker',

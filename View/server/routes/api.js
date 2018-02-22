@@ -24,6 +24,13 @@ apiRouter.get('/api/user', (req, res) => {
     });
 });
 
+
+apiRouter.post('/api/ApiHub/GetServerTime', (req, res) => {
+    res.json({
+        'serverTime': (new Date(Date.now())).toISOString(),
+    });
+});
+
 apiRouter.get('/api/appSettings', (req, res) => {
     let config = req.appconfig;
     let appSettings = {
