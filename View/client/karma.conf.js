@@ -8,6 +8,9 @@ module.exports = function (config) {
   const covHtml = reportOutput + '/html';
   config.set({
     basePath: '',
+    files: [
+      'node_modules/jquery/dist/jquery.js'
+    ],
     frameworks: ['jasmine', '@angular/cli'],
     plugins: [
       require('karma-jasmine'),
@@ -25,12 +28,13 @@ module.exports = function (config) {
     client: {
       clearContext: false // leave Jasmine Spec Runner output visible in browser
     },
-    coverageIstanbulReporter: {
-      reports: ['html', 'lcovonly', 'text-summary'],
-      fixWebpackSourcePaths: true
-    },
+    // coverageIstanbulReporter: {
+    //   reports: ['html', 'lcovonly', 'text-summary'],
+    //   fixWebpackSourcePaths: true
+    // },
     coverageReporter: {
       reporters: [
+        { type: 'in-memory' },
         { type: 'cobertura', dir: reportOutput, subdir: 'cobertura', file: 'cobertura-coverage.xml' },
         { type: 'lcovonly', dir: reportOutput, subdir: 'coverageReporter', file: 'coverage.lcov' }
       ]

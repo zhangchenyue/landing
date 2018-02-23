@@ -13,7 +13,10 @@
     "test.ts"
   ],
   "include": [
-    "**/*.spec.ts",
-    "**/*.d.ts"
+    "**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "node_modules/**/*.ts"
   ]
 }
