@@ -4,6 +4,7 @@ const path = require('path');
 const pageRouter = express.Router();
 const pageRoutes = [
     '/',
+    '/home',
     '/hello',
     '/qcview',
     '/maestrofootage',

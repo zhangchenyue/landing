@@ -9,6 +9,15 @@ import {
 
 const appRoutes: Routes = [
     {
+        path: 'home',
+        loadChildren: 'app/home/home.module#HomeModule',
+        data: <RouteData>{
+            name: 'Home',
+            preload: false,
+            featureId: ''
+        }
+    },
+    {
         path: 'hello',
         loadChildren: 'app/hello/hello.module#HelloModule',
         data: <RouteData>{

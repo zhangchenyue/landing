@@ -16,6 +16,7 @@ import {
   WebFrameworkModule,
 } from '@slb-planck-ui/web-framework';
 
+
 import { IconRegistry } from '@slb-planck-ui/web-components';
 import { AppRoutingModule } from './app-routing.module';
 import { AppWebCoreModule } from './app-web-core.module';

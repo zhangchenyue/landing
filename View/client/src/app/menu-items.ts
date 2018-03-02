@@ -8,6 +8,13 @@ import { executionMenuItems as commonMenuItems } from '@slb-planck-ui/web-common
 export function getMenuItemsForProduct(): Array<MenuItem> {
     const menuItems: Array<MenuItem> = [
         {
+            path: 'home',
+            name: 'Home',
+            icon: 'assets/ro.svg',
+            featureId: '',
+            displayOrder: 100
+        },
+        {
             path: 'hello',
             name: 'Hello',
             icon: 'assets/event-log.svg',

@@ -1,0 +1,30 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+    <h1 id="hello-title">
+        Welcome to {{ title }}!
+    </h1>
+</div>
+
+<div class="home">
+    <sdo-data-table 
+        [rows]="surveys" 
+        sortField="name" 
+        [sortOrder]="1"
+        tableClassName="table table-striped dashboard-table" 
+        [isResponsive]="true" 
+        [isPaged]="true" 
+        [rowsPerPage]="20" 
+        [rowsPerPageOptions]="[10,20,50,100]" 
+        [resetCurrentPageOnSort]="false">
+        <sdo-column field="" header=""></sdo-column>
+        <sdo-column field="name" header="WELL NAME" isSortable="true">
+        </sdo-column>
+        <sdo-column field="timeMeasuredDepth" header="MEASURED DEPTH (FT)" isSortable="true">
+        </sdo-column>
+        <sdo-column field="bitDepth" header="BIT DEPTH (FT)" isSortable="true">
+        </sdo-column>
+        <sdo-column field="rigState" header="RIG STATE" isSortable="true">
+        </sdo-column>
+        <sdo-column field="rigconnection" header="RIG CONNECTION"></sdo-column>
+    </sdo-data-table>
+</div>
