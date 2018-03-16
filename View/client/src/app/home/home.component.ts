@@ -1,17 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Survey } from './home.models';
+import { GithubService } from '../shared/github';
 
 @Component({
     selector: 'app-home',
     templateUrl: './home.component.html',
     styleUrls: ['./home.component.scss']
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
     title = 'home';
-
+    result = '';
     private surveys: Array<Survey> = [];
 
-    constructor() {
+    constructor(private githubService: GithubService) {
         const s1: Survey = {
             wellId: 'well-' + Date.now().valueOf(),
             name: 'test1',
@@ -54,5 +55,12 @@ export class HomeComponent {
             hasInformation: true
         };
         this.surveys = [s1, s2, s3];
+    }
+
+    public ngOnInit() {
+        this.githubService.getConfiguration().subscribe((res) => {
+            console.log(res);
+            this.result = JSON.stringify(res);
+        });
     }
 }

@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-
+import { HttpClientModule } from '@angular/common/http';
 import {
   ActivitiesServiceModule,
   ApiHubServiceModule,
@@ -34,7 +34,9 @@ import {
   WellprogramManagerServiceModule
 } from '@slb-planck-ui/web-core';
 
+
 import { serviceConfigFactory } from './service.config.service';
+import { GithubServiceModule, GithubService } from './shared/github';
 
 export function httpInterceptorsFactory(): Array<any> {
     return defaultInterceptors;
@@ -54,6 +56,7 @@ export function defaultHttpInterceptorsForHttpServiceFactory(): Array<any> {
 
 @NgModule({
     imports: [
+        HttpClientModule,
         HttpServiceModule.forRoot(httpInterceptorsForHttpServiceFactory),
         WebCoreModule.forRoot(),
         // needed to load all of the common services for web core
@@ -82,10 +85,11 @@ export function defaultHttpInterceptorsForHttpServiceFactory(): Array<any> {
       //  UserManagementServiceModule.forRoot(serviceConfigFactory, httpInterceptorsFactory),
    //     WellConstructionMetierServiceModule.forRoot(serviceConfigFactory, defaultHttpInterceptorsForHttpServiceFactory),
    //     WellprogramManagerServiceModule.forRoot(serviceConfigFactory, defaultHttpInterceptorsForHttpServiceFactory),
+        GithubServiceModule.forRoot()
     ],
     providers: [
         DefaultRequestHttpInterceptor,
-        SetUnitSystemHttpInterceptor
+        SetUnitSystemHttpInterceptor,
     ]
 })
 export class AppWebCoreModule {
