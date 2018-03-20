@@ -34,9 +34,13 @@ import {
   WellprogramManagerServiceModule
 } from '@slb-planck-ui/web-core';
 
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { serviceConfigFactory } from './service.config.service';
-import { GithubServiceModule, GithubService } from './shared/github';
+import { GithubServiceModule} from './shared/github';
+import { TestServiceModule} from './shared/test';
+import { SharedInterceptor } from './shared/shared.interceptor';
+
 
 export function httpInterceptorsFactory(): Array<any> {
     return defaultInterceptors;
@@ -85,11 +89,17 @@ export function defaultHttpInterceptorsForHttpServiceFactory(): Array<any> {
       //  UserManagementServiceModule.forRoot(serviceConfigFactory, httpInterceptorsFactory),
    //     WellConstructionMetierServiceModule.forRoot(serviceConfigFactory, defaultHttpInterceptorsForHttpServiceFactory),
    //     WellprogramManagerServiceModule.forRoot(serviceConfigFactory, defaultHttpInterceptorsForHttpServiceFactory),
-        GithubServiceModule.forRoot()
+          GithubServiceModule.forRoot(),
+          TestServiceModule.forRoot()
     ],
     providers: [
         DefaultRequestHttpInterceptor,
         SetUnitSystemHttpInterceptor,
+        {
+            provide: HTTP_INTERCEPTORS,
+            useClass: SharedInterceptor,
+            multi: true
+        },
     ]
 })
 export class AppWebCoreModule {

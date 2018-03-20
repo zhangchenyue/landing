@@ -6,49 +6,59 @@ import {
     HttpInterceptor
 } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
+import { ReplaySubject } from 'rxjs/ReplaySubject';
+
+declare var ActiveXObject: any;
 
 @Injectable()
 export class SharedInterceptor implements HttpInterceptor {
     private settingURL = '/api/appsettings';
-    private static appSettings: Object = null;
-  
+    private appSettingsSubject: ReplaySubject<any>;
+
     constructor() { }
     intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-        return Observable.fromPromise(this.handleAccess(request, next));
-    };
-
-    private async handleAccess(request: HttpRequest<any>, next: HttpHandler): Promise<HttpEvent<any>> {
-        if(!SharedInterceptor.appSettings){
-            SharedInterceptor.appSettings = await this.getAppSettings();
+        if (!this.appSettingsSubject) {
+            console.log('Fetching appSettings from server...');
+            this.appSettingsSubject = new ReplaySubject<any>(1);
+            this.getAppSettings().then((settings) => {
+                this.appSettingsSubject.next(settings);
+            }).catch((error) => {
+                return this.appSettingsSubject.error(error);
+            });
         }
-        request = request.clone({
+        return this.appSettingsSubject
+            .asObservable()
+            .filter((settings: any) => !!settings)
+            .flatMap((settings: any) => {
+                request = request.clone({
                     setHeaders: {
-                        'Authorization': `Bearer ${SharedInterceptor.appSettings.serviceToken}`
+                        'Authorization': `Bearer ${settings.serviceToken}`
                     }
                 });
-        return next.handle(request).toPromise();
+                return next.handle(request);
+            });
     }
 
-    getAppSettings():Promise<any>{
+    getAppSettings(): Promise<any> {
         let xhr = null;
-        if(XMLHttpRequest){
+        if (XMLHttpRequest) {
             xhr = new XMLHttpRequest();
-        }else{
+        } else {
             xhr = new ActiveXObject('Microsoft.XMLHttp');
         }
-        return new Promise((resolve, reject)=>{
+        return new Promise((resolve, reject) => {
             xhr.open('GET', this.settingURL);
-            xhr.onreadystatechange = ()=>{
-                if(xhr.readyState==4){
-                    if(xhr.status>=200 && xhr.status<400){
+            xhr.onreadystatechange = () => {
+                if (xhr.readyState === 4) {
+                    if (xhr.status >= 200 && xhr.status < 400) {
                         resolve(JSON.parse(xhr.responseText));
-                    }else{
+                    } else {
                         reject(xhr.status);
                     }
                 }
-            }
+            };
             xhr.send(null);
         });
     }
-    
+
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Survey } from './home.models';
 import { GithubService } from '../shared/github';
+import { TestService } from '../shared/test';
 
 @Component({
     selector: 'app-home',
@@ -12,7 +13,7 @@ export class HomeComponent implements OnInit {
     result = '';
     private surveys: Array<Survey> = [];
 
-    constructor(private githubService: GithubService) {
+    constructor(private githubService: GithubService, private github2Service: TestService) {
         const s1: Survey = {
             wellId: 'well-' + Date.now().valueOf(),
             name: 'test1',
@@ -59,6 +60,11 @@ export class HomeComponent implements OnInit {
 
     public ngOnInit() {
         this.githubService.getConfiguration().subscribe((res) => {
+            console.log(res);
+            this.result = JSON.stringify(res);
+        });
+
+        this.github2Service.getConfiguration().subscribe((res) => {
             console.log(res);
             this.result = JSON.stringify(res);
         });
