@@ -10,9 +10,10 @@ import { TestService } from '../shared/test';
 })
 export class HomeComponent implements OnInit {
     title = 'home';
+    filterwells: Array<Well> = [];
+    viewMode: String = '';
+    isLoading: Boolean = false;
     private wells: Array<Well> = [];
-    private filterwells: Array<Well> = [];
-
     constructor(private githubService: GithubService, private github2Service: TestService) { }
 
     public ngOnInit() {
@@ -20,8 +21,9 @@ export class HomeComponent implements OnInit {
         //     console.log(res);
         //     this.result = JSON.stringify(res);
         // });
-
+        this.isLoading = true;
         this.github2Service.getConfiguration().subscribe((res) => {
+            this.isLoading = false;
             const wells = res ? res.value : [];
             wells.length = 50;
             this.wells = wells.map((well: any) => Object.assign({}, well, { isCollapsed: true }));

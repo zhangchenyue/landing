@@ -14,7 +14,7 @@
     }
     /deep/ {
         .sdo-panel-titlebar>div:first-child {
-            width: 24rem;
+            width: 30rem;
         }
     }
     .sdo-panel-toolbar.middle {
@@ -23,7 +23,7 @@
         .well-id {
             position: absolute;
             left: 3.2rem;
-            top: 3.6rem;
+            top: 3rem;
         }
         .middle-item {
             width: 25%;
@@ -57,7 +57,7 @@
     }
     .panel-content-left {
         padding-left: 2.8rem;
-        width: 24rem;
+        width: 30rem;
     }
     .panel-content-middle {
         flex: 1;
