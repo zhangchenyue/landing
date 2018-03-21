@@ -56,12 +56,13 @@
         </sdo-action-bar-buttons>
     </sdo-action-bar>
 
-    <div *ngFor="let well of wells">
+    <div *ngFor="let well of filterwells">
 
 
         <sdo-panel class="pannel" [class.expand]="!well.isCollapsed" [panelTitle]="well.name" [isCollapsible]="true" [(isCollapsed)]="well.isCollapsed"
             (isCollapsedChange)="onCollapseChanged($event)">
             <div class="sdo-panel-toolbar middle">
+                <div class="well-id">{{well.id}}</div>
                 <div class="middle-item status-icon">
                     <sdo-icon svgIcon="prism-connection"></sdo-icon>
                 </div>

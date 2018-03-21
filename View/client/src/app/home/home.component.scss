@@ -13,17 +13,19 @@
         margin-top: 0;
     }
     /deep/ {
-        .sdo-panel-titlebar {
-            div:first-child{
-                width: 24rem;
-            }
-         
+        .sdo-panel-titlebar>div:first-child {
+            width: 24rem;
         }
     }
     .sdo-panel-toolbar.middle {
         flex: 1;
         display: flex;
-        .middle-item{
+        .well-id {
+            position: absolute;
+            left: 3.2rem;
+            top: 3.6rem;
+        }
+        .middle-item {
             width: 25%;
         }
     }

@@ -11,6 +11,7 @@ import { TestService } from '../shared/test';
 export class HomeComponent implements OnInit {
     title = 'home';
     private wells: Array<Well> = [];
+    private filterwells: Array<Well> = [];
 
     constructor(private githubService: GithubService, private github2Service: TestService) { }
 
@@ -24,6 +25,7 @@ export class HomeComponent implements OnInit {
             const wells = res ? res.value : [];
             wells.length = 50;
             this.wells = wells.map((well: any) => Object.assign({}, well, { isCollapsed: true }));
+            this.filterwells = this.wells;
         });
     }
 
@@ -47,6 +49,7 @@ export class HomeComponent implements OnInit {
     }
 
     public onSearch(event) {
-        console.log(event);
+        const wells = this.wells.filter((well: any) => well.name.toLowerCase().indexOf(event.target.value.toLowerCase()) >= 0);
+        this.filterwells = wells.length ? wells : this.wells.slice();
     }
 }
