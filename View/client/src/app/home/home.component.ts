@@ -30,4 +30,23 @@ export class HomeComponent implements OnInit {
     public onCollapseChanged(collapse) {
         console.log(collapse);
     }
+
+    public goToRODashboard() {
+        const url = 'https://rointro-dmz-wa-rodashboard.azurewebsites.net/dashboard';
+        window.open(url);
+    }
+
+    public goToRhapsody(id) {
+        const url = `https://rhintrhapsody-dmz-wa-kpidashboard.azurewebsites.net/performance?wellID=${id}`;
+        window.open(url);
+    }
+
+    public goToZeus(id) {
+        const url = `https://zeintzeus-dmz-wa-zeusdashboard.azurewebsites.net??wellID=${id}`;
+        window.open(url);
+    }
+
+    public onSearch(event) {
+        console.log(event);
+    }
 }

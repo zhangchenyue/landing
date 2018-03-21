@@ -10,14 +10,14 @@ export function getMenuItemsForProduct(): Array<MenuItem> {
         {
             path: 'home',
             name: 'Home',
-            icon: 'assets/ro.svg',
+            icon: 'assets/home.svg',
             featureId: '',
             displayOrder: 100
         },
         {
             path: 'hello',
             name: 'Hello',
-            icon: 'assets/event-log.svg',
+            icon: 'assets/user.svg',
             featureId: '',
             displayOrder: 120
         },
