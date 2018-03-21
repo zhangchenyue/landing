@@ -55,8 +55,6 @@
         <sdo-async-loader></sdo-async-loader>
     </div>
     <div>
-
-
         <sdo-panel *ngFor="let well of filterwells" class="pannel" [class.expand]="!well.isCollapsed" panelTitle="" [isCollapsible]="true"
             [(isCollapsed)]="well.isCollapsed" (isCollapsedChange)="onCollapseChanged($event)">
             <div class="sdo-panel-toolbar left">
