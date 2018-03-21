@@ -1,3 +1,72 @@
-.home{
+.home {
+    .actions {
+        margin-bottom: 1.6rem;
+        height: 5.6rem;
+    }
     padding: 0 1em;
+    .pannel.expand {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        display: block;
+    }
+    .pannel:first-of-type {
+        margin-top: 0;
+    }
+    /deep/ {
+        .sdo-panel-titlebar {
+            div:first-child{
+                width: 24rem;
+            }
+         
+        }
+    }
+    .sdo-panel-toolbar.middle {
+        flex: 1;
+        display: flex;
+        .middle-item{
+            width: 25%;
+        }
+    }
+    .middle-item.status-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #009fc2;
+    }
+    .middle-item-title,
+    .content-item-title {
+        font-family: RobotoBold;
+        font-size: 1.6rem;
+    }
+    .sdo-panel-toolbar.right {
+        display: flex;
+        align-items: center;
+        width: 16rem;
+        .app-icon {
+            margin-left: 1.6rem;
+            color: #009fc2;
+        }
+    }
+    .panel-content {
+        display: flex;
+        padding-left: 6px;
+        padding-right: 14px;
+    }
+    .panel-content-left {
+        padding-left: 2.8rem;
+        width: 24rem;
+    }
+    .panel-content-middle {
+        flex: 1;
+        display: flex;
+        .content-item {
+            width: 25%
+        }
+        .content-item:first-child {
+            text-align: center
+        }
+    }
+    .panel-content-right {
+        width: 16rem;
+    }
 }

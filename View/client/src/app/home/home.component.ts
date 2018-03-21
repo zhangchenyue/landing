@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Survey } from './home.models';
+import { Well } from './home.models';
 import { GithubService } from '../shared/github';
 import { TestService } from '../shared/test';
 
@@ -10,63 +10,24 @@ import { TestService } from '../shared/test';
 })
 export class HomeComponent implements OnInit {
     title = 'home';
-    result = '';
-    private surveys: Array<Survey> = [];
+    private wells: Array<Well> = [];
 
-    constructor(private githubService: GithubService, private github2Service: TestService) {
-        const s1: Survey = {
-            wellId: 'well-' + Date.now().valueOf(),
-            name: 'test1',
-            wellboreId: 'wellbore-' + Date.now().valueOf(),
-            trajectoryId: 'trajectory-' + Date.now().valueOf(),
-            timeMeasuredDepth: 'string',
-            bitDepth: '1000',
-            rop: '2000',
-            rigState: 'Drilling',
-            inclination: 0,
-            azimuth: 0,
-            hasInformation: true
-        };
-
-        const s2: Survey = {
-            wellId: 'well-' + Date.now().valueOf(),
-            name: 'test2',
-            wellboreId: 'wellbore-' + Date.now().valueOf(),
-            trajectoryId: 'trajectory-' + Date.now().valueOf(),
-            timeMeasuredDepth: 'string',
-            bitDepth: '1500',
-            rop: '2500',
-            rigState: 'Drilling',
-            inclination: 0,
-            azimuth: 0,
-            hasInformation: true
-        };
-
-        const s3: Survey = {
-            wellId: 'well-' + Date.now().valueOf(),
-            name: 'test3-' + + Date.now().valueOf(),
-            wellboreId: 'wellbore-' + Date.now().valueOf(),
-            trajectoryId: 'trajectory-' + Date.now().valueOf(),
-            timeMeasuredDepth: 'string',
-            bitDepth: '1200',
-            rop: '2500',
-            rigState: 'Drilling',
-            inclination: 0,
-            azimuth: 0,
-            hasInformation: true
-        };
-        this.surveys = [s1, s2, s3];
-    }
+    constructor(private githubService: GithubService, private github2Service: TestService) { }
 
     public ngOnInit() {
-        this.githubService.getConfiguration().subscribe((res) => {
-            console.log(res);
-            this.result = JSON.stringify(res);
-        });
+        // this.githubService.getConfiguration().subscribe((res) => {
+        //     console.log(res);
+        //     this.result = JSON.stringify(res);
+        // });
 
         this.github2Service.getConfiguration().subscribe((res) => {
-            console.log(res);
-            this.result = JSON.stringify(res);
+            const wells = res ? res.value : [];
+            wells.length = 50;
+            this.wells = wells.map((well: any) => Object.assign({}, well, { isCollapsed: true }));
         });
+    }
+
+    public onCollapseChanged(collapse) {
+        console.log(collapse);
     }
 }

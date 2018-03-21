@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
+import {CommonModule} from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { DataTableModule } from '@slb-planck-ui/web-components';
+import { DataTableModule, PanelModule, IconModule } from '@slb-planck-ui/web-components';
+import { ActionBarModule } from './action-bar';
 import { HomeComponent } from './home.component';
 /**
  * Home module
@@ -10,7 +12,11 @@ import { HomeComponent } from './home.component';
         HomeComponent
     ],
     imports: [
+        CommonModule,
         DataTableModule,
+        PanelModule,
+        IconModule,
+        ActionBarModule,
         RouterModule.forChild([
             { path: '', component: HomeComponent },
         ])

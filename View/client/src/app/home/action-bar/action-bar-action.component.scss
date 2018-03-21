@@ -1,0 +1,51 @@
+@import "action-bar.variables";
+
+$icon-size: 2.4rem;
+
+:host {
+    display: flex;
+    align-items: center;
+
+    /deep/ {
+        [action-bar-flex] {
+            flex: 1;
+        }
+
+        > {
+
+            .form-inline {
+                .form-control {
+                    vertical-align: initial;
+                }
+            }
+
+            input {
+                color: $action-bar-input-color;
+                width: auto;
+                max-width: none;
+                display: inline-block;
+                border: 0;
+                padding: 0.25rem 0.5rem;
+
+                &::placeholder {
+                    color: $action-bar-input-color;
+                }
+
+                &:focus {
+                    color: $action-bar-input-color !important; // need to add important to override important from stylesheet
+                }
+            }
+
+            img, svg {
+                width: $icon-size;
+                height: $icon-size;
+            }
+
+            svg {
+                path, rect, polygon, line {
+                    fill: $action-bar-icon-color;
+                }
+            }
+        }
+    }
+}

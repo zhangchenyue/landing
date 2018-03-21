@@ -21,3 +21,10 @@ export interface Survey {
     iconUrl?: string;
     kpiAlert?: number;
 }
+
+export interface Well {
+    company: string;
+    id: string;
+    name: string;
+    timeZone: string;
+}

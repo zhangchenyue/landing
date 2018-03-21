@@ -1,0 +1,22 @@
+@import "action-bar.variables";
+
+:host {
+  background: $action-bar-background-color;
+  display: flex;
+  height: $line-height;
+  line-height: $line-height;
+
+  /deep/ {
+    sdo-action-bar-action {
+        flex: 1;
+        padding-left: $padding-size;
+        padding-right: $padding-size;
+        border-right: 1px solid $action-bar-stroke-color;
+    }
+
+    sdo-action-bar-buttons {
+        padding-left: $padding-size;
+        padding-right: $padding-size;
+    }
+  }
+}

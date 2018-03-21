@@ -1,0 +1,64 @@
+@import "action-bar.variables";
+
+$button-size: 4rem;
+$icon-size: 2.4rem;
+
+:host {
+    display: flex;
+    align-items: center;
+}
+
+.btn-group {
+    display: flex;
+    align-items: center;
+    /deep/ {
+        .btn {
+            width: $button-size;
+            height: $button-size;
+            padding: 0.6rem;
+
+            > {
+                i.fa {
+                    font-size: $icon-size;
+                }
+
+                svg, img {
+                    width: $icon-size;
+                    height: $icon-size;
+                }
+
+                svg {
+                    path, rect, polygon, line {
+                        fill: $action-bar-icon-color;
+                    }
+
+                    .stroke {
+                        fill: none;
+                        stroke: $action-bar-icon-color;
+                        stroke-miterlimit: 10;
+                        stroke-width: 2px;
+                    }
+                }
+            }
+
+            &.selected {
+                > {
+                    svg {
+                        path, rect, polygon, line {
+                            fill: $action-bar-selected-icon-color;
+                        }
+
+                        .stroke {
+                            fill: none;
+                            stroke: $action-bar-selected-icon-color;
+                        }
+                    }
+                }
+            }
+
+            &:not(.selected) {
+                background: $action-bar-button-color;
+            }
+        }
+    }
+}

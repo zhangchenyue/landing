@@ -1,0 +1,11 @@
+@import "../../../../node_modules/@slb-planck-ui/web-components/core/style/theme-variables";
+
+$action-bar-background-color: sdo-color($sdo-contrast-light, default-contrast);
+$action-bar-stroke-color: sdo-color($sdo-contrast-light, 300);
+$action-bar-button-color: sdo-color($sdo-contrast-light, 50);
+$action-bar-icon-color: sdo-color($sdo-contrast-light, 400);
+$action-bar-selected-icon-color: #fff;
+$action-bar-input-color: sdo-color($sdo-contrast-light, 400);
+
+$line-height: 4.6rem;
+$padding-size: 1.4rem;
