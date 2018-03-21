@@ -2,19 +2,42 @@
     .actions {
         margin-bottom: 1.6rem;
         height: 5.6rem;
+        .buttons {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            button {
+                height: 100%;
+                padding: 0 2rem;
+                font-size: 1.6rem;
+                border-right: 1px solid #ccc;
+            }
+            /deep/ {
+                sdo-icon {
+                    width: 2.4rem;
+                    height: 2.4rem;
+                }
+            }
+        }
     }
     padding: 0 1em;
+    .pannel {
+        margin-top: 0;
+        margin-bottom: 0;
+        display: block;
+    }
     .pannel.expand {
         margin-top: 1rem;
         margin-bottom: 1rem;
-        display: block;
     }
     .pannel:first-of-type {
         margin-top: 0;
     }
-    /deep/ {
-        .sdo-panel-titlebar>div:first-child {
-            width: 30rem;
+    .sdo-panel-toolbar.left {
+        width: 30rem;
+        .well-name {
+            font-family: RobotoBold;
+            font-size: 1.6rem;
         }
     }
     .sdo-panel-toolbar.middle {
@@ -56,8 +79,10 @@
         padding-right: 14px;
     }
     .panel-content-left {
-        padding-left: 2.8rem;
-        width: 30rem;
+        padding-left: 2.5rem;
+        .content-item {
+            width: 30rem;
+        }
     }
     .panel-content-middle {
         flex: 1;
